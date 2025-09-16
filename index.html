@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Career Path</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <main class="wrap">
+        <header class="topbar">
+            <div class="brand">
+                <img src="https://www.shutterstock.com/image-vector/abstract-ai-logo-set-sleek-600nw-2590920659.jpg" alt="Logo">
+                <div>
+                    <h1>AI Career Path</h1>
+                    <p class="tag">Think. Click. Learn.</p>
+                </div>
+            </div>
+            <nav>
+                <button id="aboutBtn" class="link">About</button>
+            </nav>
+        </header>
+
+        <section class="card prefs" id="prefsCard">
+            <div class="left">
+                <h2>Get Started</h2>
+                <label>Full name <input id="name" placeholder="Your full name"></label>
+                <label>Email (optional) <input id="email" placeholder="you@example.com"></label>
+                <label>Role <select id="role">
+                    <option>Data Analyst</option>
+                    <option selected>Data Scientist</option>
+                    <option>ML Engineer</option>
+                </select></label>
+                <label>Difficulty <select id="difficulty">
+                    <option>beginner</option>
+                    <option selected>intermediate</option>
+                    <option>advanced</option>
+                </select></label>
+                <div class="row">
+                    <button id="startBtn" class="primary">Start Assessment</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card hidden" id="quizCard">
+            <div class="quizHeader">
+                <div><strong id="playerName">Candidate</strong><div class="muted" id="playerMeta">—</div></div>
+                <div class="status"><div id="timer">00:00</div><div class="progress"><div id="progressFill"></div></div></div>
+            </div>
+            <div class="questionCard">
+                <h3 id="questionTitle">Question</h3>
+                <div id="options" class="optionsGrid"></div>
+                <div id="explanation" class="answers hidden"></div>
+                <div class="controls">
+                    <button id="prevBtn" class="ghost">Previous</button>
+                    <button id="skipBtn" class="ghost">Skip</button>
+                    <button id="nextBtn" class="primary">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card hidden" id="batchCard">
+            <h2>Batch Complete!</h2>
+            <p id="batchSummary" class="muted"></p>
+            <div class="row">
+                <button id="continueBtn" class="primary">Continue to Next Batch</button>
+            </div>
+        </section>
+
+        <section class="card hidden" id="resultCard">
+            <h2>Assessment Result</h2>
+            <p id="resultSummary" class="muted"></p>
+            <p id="scoreText"></p>
+            <p id="timeText"></p>
+            <pre id="answersList" class="answers"></pre>
+            <div class="row">
+                <button id="restartBtn" class="ghost">Restart</button>
+                <button id="downloadBtn" class="ghost">Download Report</button>
+                <button id="certificateBtn" class="primary">Get Certificate</button>
+            </div>
+            <div id="certificatePreview" class="hidden">
+                <h3>Your Certificate Preview</h3>
+                <iframe id="certificateFrame" style="width:100%;height:500px;border:1px solid #ccc;"></iframe>
+            </div>
+        </section>
+
+        <section class="card hidden" id="aboutCard">
+            <div class="about">
+                <h3>About</h3>
+                <p>👋 Hi, I’m Abhilash, a 3rd-year B.Tech student at St. Martin’s Engineering College, Hyderabad, specializing in AI & DS.</p>
+                <p><div class="about-this-project">📌 About This Project:</div>Built an AI-Powered Quiz Platform that generates real-time questions using Gemma API.</p>
+            </div>
+            <button id="closeAbout" class="ghost">Close</button>
+        </section>
+
+        <footer class="muted">© 2025 AI Career Path</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
